@@ -41,7 +41,6 @@ app.post(
     }
   }
 );
-
 app.post(
   "/books",
   [
@@ -66,7 +65,6 @@ app.post(
     }
   }
 );
-
 app.post("/book", [check("body").isstring()], async (req, res, next) => {
   const errors = validationres(req);
   if (!errors.isEmpty()) {
@@ -109,7 +107,4 @@ app.post("/login", async (req, res, next)=>{
     res.json({ message: "password in correct" });
   }
 });
-
-
-
 module.exports = app;
